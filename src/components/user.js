@@ -14,7 +14,14 @@ class User extends Component {
                     name:'name_input',
                     type:'text',
                     placeholder: 'Enter your name'    
-                }
+                },
+                validation:{
+                    required:true
+                },
+                valid:false,
+                touched:false,
+                validationMessage:''
+
             },
             lastname:{
                 element:'input',
@@ -26,13 +33,37 @@ class User extends Component {
                     type:'text',
                     placeholder: 'Enter your lastname'    
                 }
+            },
+            message:{
+                element:'text',
+                value:'',
+                label:true,
+                labelText:'message',
+                config:{
+                    name:'name_input',
+                    rows:4,
+                    cols: 30     
+                }
+            },
+            age:{
+                element:'select',
+                value:'',
+                label:true,
+                labelText:'Age',
+                config:{
+                    name:'name_input',
+                    options:[
+                        {val:'1', text:'10-20'},
+                        {val:'2', text:'20-30'},
+                        {val:'3', text:'+30'}
+                    ]    
+                }
             }
         }
         
     }
 
     updateForm=(newState)=>{
-        console.log(newState)
         this.setState({
             formData: newState
         })
