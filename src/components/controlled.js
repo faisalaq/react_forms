@@ -8,15 +8,15 @@ class Controlled extends Component {
         
     }
 
-    handlenameChange=(event)=>{
+    handleNameChange=(event)=>{
         this.setState({
-            lastname:event.target.value
+            name:event.target.value
         })
     }
 
     handleLastnameChange=(event)=>{
         this.setState({
-            name:event.target.value
+            lastname:event.target.value
         })
     }
 
@@ -28,7 +28,7 @@ class Controlled extends Component {
                         <label>First Name</label>
                         <input 
                             type="text"
-                            onChange={this.handlenameChange}
+                            onChange={this.handleNameChange}
                             value={this.state.name}
                         />
                     </div>
